@@ -1,11 +1,10 @@
-// Part 1" Refactoring
+// Part 1: Refactoring
 
 // Variables
 let currentCell = "";
 let currentRow = [];
     const rows = [];
 
-    
 // Function to add a cell to the current row
 const addCell = () => {
     currentRow.push(currentCell.trim());
@@ -17,7 +16,7 @@ const addCell = () => {
     if (currentRow.length > 0) {
       rows.push([...currentRow]);
       console.log(currentRow.join(', '));
-      currentRow = [];
+     currentRow = [];
     }
   };
 
@@ -43,11 +42,19 @@ else if (char === '\n') {
   }
 }
 
-// Handle the last row (if it ends without a newline)
+//Last row- if no newline
 if (currentCell !== "") {
   addCell();
   addRow();
 }
+return rows; 
 
-return rows; // Return the parsed rows as an array of arrays for further processing if needed
-}
+
+//Part 2: Expanding Functionality
+
+//Declare Variables
+let currentCell = "";
+let currentRow = [];
+const rows = [];
+let numberOfColumns = 0;
+

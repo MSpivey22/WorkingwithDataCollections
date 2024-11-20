@@ -59,5 +59,3 @@ for (let i = 0; i < csvString.length; i++) {
  else if (char === '\n') {
     currentRow.push(currentCell); 
     console.log(currentRow.join(', '));
-
-
